@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using rise_gs.DTOs;
 using rise_gs.Models;
 
 namespace rise_gs.Controllers
@@ -143,64 +144,57 @@ namespace rise_gs.Controllers
             return Ok(result); // 200 OK
         }
 
-        // POST api/v1/usuario
         [HttpPost]
-        public async Task<IActionResult> CreateUsuario([FromBody] Usuario model)
+        public async Task<IActionResult> CreateUsuario([FromBody] UsuarioCreateDto dto)
         {
             if (!ModelState.IsValid)
-                return BadRequest(ModelState); // 400
+                return BadRequest(ModelState);
+
+            var model = new Usuario
+            {
+                NomeUsuario = dto.NomeUsuario,
+                EmailUsuario = dto.EmailUsuario,
+                SenhaUsuario = dto.SenhaUsuario,
+                TipoUsuario = dto.TipoUsuario
+            };
 
             _context.Usuarios.Add(model);
             await _context.SaveChangesAsync();
 
+            // monta a resposta (pode ser um UsuarioDto também)
             var result = new
             {
                 model.IdUsuario,
                 model.NomeUsuario,
                 model.EmailUsuario,
-                model.TipoUsuario,
-                links = new[]
-                {
-                    new {
-                        rel = "self",
-                        href = Url.Action(nameof(GetUsuarioById), values: new { id = model.IdUsuario }),
-                        method = "GET"
-                    },
-                    new {
-                        rel = "update",
-                        href = Url.Action(nameof(UpdateUsuario), values: new { id = model.IdUsuario }),
-                        method = "PUT"
-                    },
-                    new {
-                        rel = "delete",
-                        href = Url.Action(nameof(DeleteUsuario), values: new { id = model.IdUsuario }),
-                        method = "DELETE"
-                    }
-                }
+                model.TipoUsuario
             };
 
-            return CreatedAtAction(
-                nameof(GetUsuarioById),
+            return CreatedAtAction(nameof(GetUsuarioById),
                 new { id = model.IdUsuario },
-                result
-            ); // 201 Created
+                result);
         }
+
 
         // PUT api/v1/usuario/5
         [HttpPut("{id:int}")]
-        public async Task<IActionResult> UpdateUsuario(int id, [FromBody] Usuario model)
+        public async Task<IActionResult> UpdateUsuario(int id, [FromBody] UsuarioUpdateDto dto)
         {
-            if (id != model.IdUsuario)
-                return BadRequest("ID da URL é diferente do ID do corpo da requisição.");
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
 
             var usuario = await _context.Usuarios.FindAsync(id);
             if (usuario == null)
                 return NotFound(); // 404
 
-            usuario.NomeUsuario = model.NomeUsuario;
-            usuario.EmailUsuario = model.EmailUsuario;
-            usuario.SenhaUsuario = model.SenhaUsuario;
-            usuario.TipoUsuario = model.TipoUsuario;
+            usuario.NomeUsuario = dto.NomeUsuario;
+            usuario.EmailUsuario = dto.EmailUsuario;
+
+            // Se quiser permitir não alterar a senha, só troca se vier algo:
+            if (!string.IsNullOrWhiteSpace(dto.SenhaUsuario))
+                usuario.SenhaUsuario = dto.SenhaUsuario;
+
+            usuario.TipoUsuario = dto.TipoUsuario;
 
             await _context.SaveChangesAsync();
 
@@ -213,12 +207,12 @@ namespace rise_gs.Controllers
         {
             var usuario = await _context.Usuarios.FindAsync(id);
             if (usuario == null)
-                return NotFound(); // 404
+                return NotFound();
 
             _context.Usuarios.Remove(usuario);
             await _context.SaveChangesAsync();
 
-            return NoContent(); // 204
+            return NoContent();
         }
     }
 }
