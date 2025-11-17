@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\RaphaelaOliveiraTatt\\source\\repos\\rise_gs\\rise_gs\\rise_gs.csproj": {}
+    "C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs.csproj": {}
   },
   "projects": {
-    "C:\\Users\\RaphaelaOliveiraTatt\\source\\repos\\rise_gs\\rise_gs\\rise_gs.csproj": {
+    "C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\RaphaelaOliveiraTatt\\source\\repos\\rise_gs\\rise_gs\\rise_gs.csproj",
+        "projectUniqueName": "C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs.csproj",
         "projectName": "rise_gs",
-        "projectPath": "C:\\Users\\RaphaelaOliveiraTatt\\source\\repos\\rise_gs\\rise_gs\\rise_gs.csproj",
-        "packagesPath": "C:\\Users\\RaphaelaOliveiraTatt\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\RaphaelaOliveiraTatt\\source\\repos\\rise_gs\\rise_gs\\obj\\",
+        "projectPath": "C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs.csproj",
+        "packagesPath": "C:\\Users\\rapha\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\RaphaelaOliveiraTatt\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\rapha\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -44,7 +44,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "10.0.100"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
@@ -90,24 +90,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.21, 8.0.21]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[8.0.21, 8.0.21]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[8.0.21, 8.0.21]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[8.0.21, 8.0.21]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -116,7 +98,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.100-rc.2.25502.107/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

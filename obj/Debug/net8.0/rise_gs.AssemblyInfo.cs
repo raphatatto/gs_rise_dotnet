@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("rise_gs")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2e1793c01cea4989039e9d77617608b139ff76ab")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+64bb471a1d47ee7faf8342b800056be8ca47013c")]
 [assembly: System.Reflection.AssemblyProductAttribute("rise_gs")]
 [assembly: System.Reflection.AssemblyTitleAttribute("rise_gs")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using rise_gs.DTOs;
 using rise_gs.Models;
 
 namespace rise_gs.Controllers
@@ -29,7 +30,18 @@ namespace rise_gs.Controllers
                 query = query.Where(b => b.IdUsuario == idUsuario.Value);
 
             var registros = await query.ToListAsync();
-            return Ok(registros);
+
+            var result = registros.Select(b => new BemEstarDto
+            {
+                IdBemEstar = b.IdBemEstar,
+                DtRegistro = b.DtRegistro,
+                NivelHumor = b.NivelHumor,
+                HorasEstudo = b.HorasEstudo,
+                DescAtividade = b.DescAtividade,
+                IdUsuario = b.IdUsuario
+            });
+
+            return Ok(result);
         }
 
         // GET api/v1/bemestar/5
@@ -40,40 +52,56 @@ namespace rise_gs.Controllers
             if (registro == null)
                 return NotFound();
 
-            return Ok(registro);
+            var result = new BemEstarDto
+            {
+                IdBemEstar = registro.IdBemEstar,
+                DtRegistro = registro.DtRegistro,
+                NivelHumor = registro.NivelHumor,
+                HorasEstudo = registro.HorasEstudo,
+                DescAtividade = registro.DescAtividade,
+                IdUsuario = registro.IdUsuario
+            };
+
+            return Ok(result);
         }
 
         // POST api/v1/bemestar
         [HttpPost]
-        public async Task<IActionResult> Create([FromBody] BemEstar model)
+        public async Task<IActionResult> Create([FromBody] BemEstarCreateDto dto)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            _context.BemEstares.Add(model);
+            var entity = new BemEstar
+            {
+                DtRegistro = dto.DtRegistro,
+                NivelHumor = dto.NivelHumor,
+                HorasEstudo = dto.HorasEstudo,
+                DescAtividade = dto.DescAtividade,
+                IdUsuario = dto.IdUsuario
+            };
+
+            _context.BemEstares.Add(entity);
             await _context.SaveChangesAsync();
 
             return CreatedAtAction(nameof(GetById),
-                new { id = model.IdBemEstar },
-                model);
+                new { id = entity.IdBemEstar },
+                entity);
         }
 
         // PUT api/v1/bemestar/5
         [HttpPut("{id:int}")]
-        public async Task<IActionResult> Update(int id, [FromBody] BemEstar model)
+        public async Task<IActionResult> Update(int id, [FromBody] BemEstarUpdateDto dto)
         {
-            if (id != model.IdBemEstar)
-                return BadRequest("ID da URL difere do corpo.");
-
             var registro = await _context.BemEstares.FindAsync(id);
             if (registro == null)
                 return NotFound();
 
-            registro.DtRegistro = model.DtRegistro;
-            registro.NivelHumor = model.NivelHumor;
-            registro.HorasEstudo = model.HorasEstudo;
-            registro.DescAtividade = model.DescAtividade;
-            registro.IdUsuario = model.IdUsuario;
+            registro.DtRegistro = dto.DtRegistro;
+            registro.NivelHumor = dto.NivelHumor;
+            registro.HorasEstudo = dto.HorasEstudo;
+            registro.DescAtividade = dto.DescAtividade;
+            registro.IdUsuario = dto.IdUsuario;
 
             await _context.SaveChangesAsync();
             return NoContent();
@@ -89,6 +117,7 @@ namespace rise_gs.Controllers
 
             _context.BemEstares.Remove(registro);
             await _context.SaveChangesAsync();
+
             return NoContent();
         }
     }

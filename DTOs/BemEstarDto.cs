@@ -1,10 +1,6 @@
-﻿
-using System.Text.Json.Serialization;
-
-namespace rise_gs.Models
-
+namespace rise_gs.DTOs
 {
-    public class BemEstar
+    public class BemEstarDto
     {
         public int IdBemEstar { get; set; }
         public DateTime DtRegistro { get; set; }
@@ -13,8 +9,5 @@ namespace rise_gs.Models
         public string? DescAtividade { get; set; }
 
         public int IdUsuario { get; set; }
-
-        [JsonIgnore]
-        public Usuario Usuario { get; set; }
     }
 }
