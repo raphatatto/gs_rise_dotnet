@@ -175,6 +175,38 @@ namespace rise_gs.Controllers
                 result);
         }
 
+        // POST api/v1/usuario/login
+        [HttpPost("login")]
+        public async Task<IActionResult> Login([FromBody] LoginRequestDto dto)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            // Busca usuário pelo nome e senha
+            var usuario = await _context.Usuarios
+                .AsNoTracking()
+                .FirstOrDefaultAsync(u =>
+                    u.NomeUsuario == dto.NomeUsuario &&
+                    u.SenhaUsuario == dto.SenhaUsuario);
+
+            if (usuario == null)
+            {
+                // 401 Unauthorized se login falhar
+                return Unauthorized(new { message = "Nome de usuário ou senha inválidos." });
+            }
+
+            // Nunca devolve a senha na resposta
+            var result = new
+            {
+                usuario.IdUsuario,
+                usuario.NomeUsuario,
+                usuario.EmailUsuario,
+                usuario.TipoUsuario
+            };
+
+            return Ok(result); // 200 OK
+        }
+
 
         // PUT api/v1/usuario/5
         [HttpPut("{id:int}")]
