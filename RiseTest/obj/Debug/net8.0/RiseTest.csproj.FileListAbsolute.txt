@@ -136,3 +136,13 @@ C:\Users\RaphaelaOliveiraTatt\source\repos\rise_gs\RiseTest\obj\Debug\net8.0\ref
 C:\Users\RaphaelaOliveiraTatt\source\repos\rise_gs\RiseTest\obj\Debug\net8.0\RiseTest.pdb
 C:\Users\RaphaelaOliveiraTatt\source\repos\rise_gs\RiseTest\obj\Debug\net8.0\RiseTest.genruntimeconfig.cache
 C:\Users\RaphaelaOliveiraTatt\source\repos\rise_gs\RiseTest\obj\Debug\net8.0\ref\RiseTest.dll
+C:\Users\rapha\source\repos\raphatatto\gs_rise_dotnet\RiseTest\bin\Debug\net8.0\.msCoverageSourceRootsMapping_RiseTest
+C:\Users\rapha\source\repos\raphatatto\gs_rise_dotnet\RiseTest\obj\Debug\net8.0\RiseTest.csproj.AssemblyReference.cache
+C:\Users\rapha\source\repos\raphatatto\gs_rise_dotnet\RiseTest\obj\Debug\net8.0\RiseTest.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rapha\source\repos\raphatatto\gs_rise_dotnet\RiseTest\obj\Debug\net8.0\RiseTest.AssemblyInfoInputs.cache
+C:\Users\rapha\source\repos\raphatatto\gs_rise_dotnet\RiseTest\obj\Debug\net8.0\RiseTest.AssemblyInfo.cs
+C:\Users\rapha\source\repos\raphatatto\gs_rise_dotnet\RiseTest\obj\Debug\net8.0\RiseTest.csproj.CoreCompileInputs.cache
+C:\Users\rapha\source\repos\raphatatto\gs_rise_dotnet\RiseTest\obj\Debug\net8.0\RiseTest.sourcelink.json
+C:\Users\rapha\source\repos\raphatatto\gs_rise_dotnet\RiseTest\obj\Debug\net8.0\RiseTest.dll
+C:\Users\rapha\source\repos\raphatatto\gs_rise_dotnet\RiseTest\obj\Debug\net8.0\refint\RiseTest.dll
+C:\Users\rapha\source\repos\raphatatto\gs_rise_dotnet\RiseTest\obj\Debug\net8.0\RiseTest.pdb
