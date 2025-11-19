@@ -8,45 +8,55 @@ using rise_gs.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// 🔹 DbContext (Oracle)
+// DbContext
 builder.Services.AddDbContext<RiseContext>(options =>
     options.UseOracle(builder.Configuration.GetConnectionString("OracleConnection")));
 
-// 🔹 Configura o JwtSettings a partir do appsettings.json
-builder.Services.Configure<JwtSettings>(
-    builder.Configuration.GetSection("Jwt"));
+// Configura seção Jwt para o TokenService
+builder.Services.Configure<JwtSettings>(builder.Configuration.GetSection("Jwt"));
 
-// 🔹 Faz o bind fortemente tipado (usado abaixo)
-var jwtSettings = builder.Configuration
-    .GetSection("Jwt")
-    .Get<JwtSettings>() ?? new JwtSettings();
+// 🔹 PEGA AS CONFIGS BRUTAS
+var config = builder.Configuration;
 
-// 🔹 Registra o TokenService na DI
+// 🔹 Lê a Key diretamente (e garante fallback)
+var jwtKey = config["Jwt:Key"];
+if (string.IsNullOrWhiteSpace(jwtKey))
+{
+    Console.WriteLine("⚠ Jwt:Key veio vazia. Usando chave padrão apenas para DESENVOLVIMENTO.");
+    jwtKey = "SenhaSegura_super_grande_123!";
+}
+
+var jwtIssuer = config["Jwt:Issuer"] ?? "rise-api";
+var jwtAudience = config["Jwt:Audience"] ?? "rise-clients";
+var keyBytes = Encoding.UTF8.GetBytes(jwtKey);
+var signingKey = new SymmetricSecurityKey(keyBytes);
+
+// TokenService
 builder.Services.AddScoped<TokenService>();
 
-// 🔹 Configura autenticação JWT
-builder.Services.AddAuthentication(options =>
-{
-    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-})
-.AddJwtBearer(options =>
-{
-    options.RequireHttpsMetadata = false; // em produção: true
-    options.SaveToken = true;
-    options.TokenValidationParameters = new TokenValidationParameters
+// Autenticação JWT
+builder.Services
+    .AddAuthentication(options =>
     {
-        ValidateIssuer = true,
-        ValidateAudience = true,
-        ValidateIssuerSigningKey = true,
-        ValidIssuer = jwtSettings.Issuer,
-        ValidAudience = jwtSettings.Audience,
-        IssuerSigningKey = new SymmetricSecurityKey(
-            Encoding.UTF8.GetBytes(jwtSettings.Key))
-    };
-});
+        options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+        options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+    })
+    .AddJwtBearer(options =>
+    {
+        options.RequireHttpsMetadata = false; // em prod: true
+        options.SaveToken = true;
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidateIssuerSigningKey = true,
+            ValidIssuer = jwtIssuer,
+            ValidAudience = jwtAudience,
+            IssuerSigningKey = signingKey
+        };
+    });
 
-// 🔹 Controllers / Swagger / HealthChecks
+// Controllers / Swagger / etc.
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -54,7 +64,7 @@ builder.Services.AddHealthChecks();
 
 var app = builder.Build();
 
-// Middleware de tracing
+// tracing simples
 app.Use(async (context, next) =>
 {
     var traceId = Activity.Current?.Id ?? Guid.NewGuid().ToString();
@@ -71,7 +81,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.UseAuthentication();  // 👈 JWT entra aqui
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();

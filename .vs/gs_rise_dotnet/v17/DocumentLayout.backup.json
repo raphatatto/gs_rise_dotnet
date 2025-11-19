@@ -1,0 +1,602 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:rise_gs\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:rise_gs\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:rise_gs\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\RiseContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:rise_gs\\RiseContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\Services\\TokenService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:rise_gs\\Services\\TokenService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\Controllers\\UsuarioController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:rise_gs\\Controllers\\UsuarioController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\Services\\JwtSettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:rise_gs\\Services\\JwtSettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\DTOs\\Usuario\\LoginRequestDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:rise_gs\\DTOs\\Usuario\\LoginRequestDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\Controllers\\CurriculoController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:rise_gs\\Controllers\\CurriculoController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\DTOs\\Curriculo\\CurriculoUpdateDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:rise_gs\\DTOs\\Curriculo\\CurriculoUpdateDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\DTOs\\Curriculo\\CurriculoCreateDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:rise_gs\\DTOs\\Curriculo\\CurriculoCreateDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\DTOs\\Curriculo\\CurriculoDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:rise_gs\\DTOs\\Curriculo\\CurriculoDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\Models\\Curriculo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:rise_gs\\Models\\Curriculo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\DTOs\\TrilhaProgresso\\TrilhaProgressoDtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:rise_gs\\DTOs\\TrilhaProgresso\\TrilhaProgressoDtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\Controllers\\TrilhaProgressoController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:rise_gs\\Controllers\\TrilhaProgressoController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\DTOs\\TrilhaObjetivo\\TrilhaObjetivoUpdateDto.cs||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:rise_gs\\DTOs\\TrilhaObjetivo\\TrilhaObjetivoUpdateDto.cs||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\DTOs\\TrilhaObjetivo\\TrilhaObjetivoCreateDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:rise_gs\\DTOs\\TrilhaObjetivo\\TrilhaObjetivoCreateDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\DTOs\\TrilhaObjetivo\\TrilhaObjetivoDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:rise_gs\\DTOs\\TrilhaObjetivo\\TrilhaObjetivoDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\Models\\TrilhaProgresso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:rise_gs\\Models\\TrilhaProgresso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\Controllers\\TrilhaObjetivoController.cs||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:rise_gs\\Controllers\\TrilhaObjetivoController.cs||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\Controllers\\CursoController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:rise_gs\\Controllers\\CursoController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\Controllers\\BemEstarController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:rise_gs\\Controllers\\BemEstarController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\DTOs\\BemEstar\\BemEstarCreateDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:rise_gs\\DTOs\\BemEstar\\BemEstarCreateDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\DTOs\\PagedResponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:rise_gs\\DTOs\\PagedResponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\DTOs\\LinkDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:rise_gs\\DTOs\\LinkDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\DTOs\\Usuario\\UsuarioUpdateDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:rise_gs\\DTOs\\Usuario\\UsuarioUpdateDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\DTOs\\Usuario\\UsuarioDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:rise_gs\\DTOs\\Usuario\\UsuarioDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\DTOs\\Usuario\\UsuarioCreateDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:rise_gs\\DTOs\\Usuario\\UsuarioCreateDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\DTOs\\Curso\\CursoUpdateDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:rise_gs\\DTOs\\Curso\\CursoUpdateDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\DTOs\\Curso\\CursoDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:rise_gs\\DTOs\\Curso\\CursoDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\DTOs\\Curso\\CursoCreateDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:rise_gs\\DTOs\\Curso\\CursoCreateDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\DTOs\\BemEstar\\BemEstarUpdateDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:rise_gs\\DTOs\\BemEstar\\BemEstarUpdateDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\DTOs\\BemEstar\\BemEstarDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:rise_gs\\DTOs\\BemEstar\\BemEstarDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\Models\\TrilhaObjetivo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:rise_gs\\Models\\TrilhaObjetivo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\appsettings.json",
+              "RelativeDocumentMoniker": "rise_gs\\appsettings.json",
+              "ToolTip": "C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\appsettings.json",
+              "RelativeToolTip": "rise_gs\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-19T05:30:03.539Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": ".gitignore",
+              "DocumentMoniker": "C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\.gitignore",
+              "RelativeDocumentMoniker": "rise_gs\\.gitignore",
+              "ToolTip": "C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\.gitignore",
+              "RelativeToolTip": "rise_gs\\.gitignore",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-11-19T05:26:05.856Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RiseContext.cs",
+              "DocumentMoniker": "C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\RiseContext.cs",
+              "RelativeDocumentMoniker": "rise_gs\\RiseContext.cs",
+              "ToolTip": "C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\RiseContext.cs",
+              "RelativeToolTip": "rise_gs\\RiseContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T05:26:05.061Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\Program.cs",
+              "RelativeDocumentMoniker": "rise_gs\\Program.cs",
+              "ToolTip": "C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\Program.cs",
+              "RelativeToolTip": "rise_gs\\Program.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAswEIAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T05:25:48.001Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "JwtSettings.cs",
+              "DocumentMoniker": "C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\Services\\JwtSettings.cs",
+              "RelativeDocumentMoniker": "rise_gs\\Services\\JwtSettings.cs",
+              "ToolTip": "C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\Services\\JwtSettings.cs",
+              "RelativeToolTip": "rise_gs\\Services\\JwtSettings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T04:30:24.856Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TokenService.cs",
+              "DocumentMoniker": "C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\Services\\TokenService.cs",
+              "RelativeDocumentMoniker": "rise_gs\\Services\\TokenService.cs",
+              "ToolTip": "C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\Services\\TokenService.cs",
+              "RelativeToolTip": "rise_gs\\Services\\TokenService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAswB8AAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T03:41:42.629Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CurriculoCreateDto.cs",
+              "DocumentMoniker": "C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\DTOs\\Curriculo\\CurriculoCreateDto.cs",
+              "RelativeDocumentMoniker": "rise_gs\\DTOs\\Curriculo\\CurriculoCreateDto.cs",
+              "ToolTip": "C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\DTOs\\Curriculo\\CurriculoCreateDto.cs",
+              "RelativeToolTip": "rise_gs\\DTOs\\Curriculo\\CurriculoCreateDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T03:02:55.754Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UsuarioController.cs",
+              "DocumentMoniker": "C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\Controllers\\UsuarioController.cs",
+              "RelativeDocumentMoniker": "rise_gs\\Controllers\\UsuarioController.cs",
+              "ToolTip": "C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\Controllers\\UsuarioController.cs",
+              "RelativeToolTip": "rise_gs\\Controllers\\UsuarioController.cs",
+              "ViewState": "AgIAANsAAAAAAAAAAAAswA4BAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-18T23:57:33.89Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "CurriculoDto.cs",
+              "DocumentMoniker": "C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\DTOs\\Curriculo\\CurriculoDto.cs",
+              "RelativeDocumentMoniker": "rise_gs\\DTOs\\Curriculo\\CurriculoDto.cs",
+              "ToolTip": "C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\DTOs\\Curriculo\\CurriculoDto.cs",
+              "RelativeToolTip": "rise_gs\\DTOs\\Curriculo\\CurriculoDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T03:03:11.382Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CurriculoUpdateDto.cs",
+              "DocumentMoniker": "C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\DTOs\\Curriculo\\CurriculoUpdateDto.cs",
+              "RelativeDocumentMoniker": "rise_gs\\DTOs\\Curriculo\\CurriculoUpdateDto.cs",
+              "ToolTip": "C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\DTOs\\Curriculo\\CurriculoUpdateDto.cs",
+              "RelativeToolTip": "rise_gs\\DTOs\\Curriculo\\CurriculoUpdateDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T03:02:37.99Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Curriculo.cs",
+              "DocumentMoniker": "C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\Models\\Curriculo.cs",
+              "RelativeDocumentMoniker": "rise_gs\\Models\\Curriculo.cs",
+              "ToolTip": "C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\Models\\Curriculo.cs",
+              "RelativeToolTip": "rise_gs\\Models\\Curriculo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T02:35:53.402Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "LoginRequestDto.cs",
+              "DocumentMoniker": "C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\DTOs\\Usuario\\LoginRequestDto.cs",
+              "RelativeDocumentMoniker": "rise_gs\\DTOs\\Usuario\\LoginRequestDto.cs",
+              "ToolTip": "C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\DTOs\\Usuario\\LoginRequestDto.cs",
+              "RelativeToolTip": "rise_gs\\DTOs\\Usuario\\LoginRequestDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T00:07:36.978Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "TrilhaProgresso.cs",
+              "DocumentMoniker": "C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\Models\\TrilhaProgresso.cs",
+              "RelativeDocumentMoniker": "rise_gs\\Models\\TrilhaProgresso.cs",
+              "ToolTip": "C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\Models\\TrilhaProgresso.cs",
+              "RelativeToolTip": "rise_gs\\Models\\TrilhaProgresso.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T01:42:55.183Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "TrilhaObjetivoCreateDto.cs",
+              "DocumentMoniker": "C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\DTOs\\TrilhaObjetivo\\TrilhaObjetivoCreateDto.cs",
+              "RelativeDocumentMoniker": "rise_gs\\DTOs\\TrilhaObjetivo\\TrilhaObjetivoCreateDto.cs",
+              "ToolTip": "C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\DTOs\\TrilhaObjetivo\\TrilhaObjetivoCreateDto.cs",
+              "RelativeToolTip": "rise_gs\\DTOs\\TrilhaObjetivo\\TrilhaObjetivoCreateDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T01:33:39.938Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CurriculoController.cs",
+              "DocumentMoniker": "C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\Controllers\\CurriculoController.cs",
+              "RelativeDocumentMoniker": "rise_gs\\Controllers\\CurriculoController.cs",
+              "ToolTip": "C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\Controllers\\CurriculoController.cs",
+              "RelativeToolTip": "rise_gs\\Controllers\\CurriculoController.cs",
+              "ViewState": "AgIAAGoAAAAAAAAAAAAswIQAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T00:18:55.42Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "TrilhaObjetivoController.cs",
+              "DocumentMoniker": "C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\Controllers\\TrilhaObjetivoController.cs",
+              "RelativeDocumentMoniker": "rise_gs\\Controllers\\TrilhaObjetivoController.cs",
+              "ToolTip": "C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\Controllers\\TrilhaObjetivoController.cs",
+              "RelativeToolTip": "rise_gs\\Controllers\\TrilhaObjetivoController.cs",
+              "ViewState": "AgIAAHcAAAAAAAAAAAAswJMAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T00:01:50.516Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "TrilhaProgressoController.cs",
+              "DocumentMoniker": "C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\Controllers\\TrilhaProgressoController.cs",
+              "RelativeDocumentMoniker": "rise_gs\\Controllers\\TrilhaProgressoController.cs",
+              "ToolTip": "C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\Controllers\\TrilhaProgressoController.cs",
+              "RelativeToolTip": "rise_gs\\Controllers\\TrilhaProgressoController.cs",
+              "ViewState": "AgIAAGAAAAAAAAAAAAAvwHMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-18T23:57:32.116Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "TrilhaObjetivoDto.cs",
+              "DocumentMoniker": "C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\DTOs\\TrilhaObjetivo\\TrilhaObjetivoDto.cs",
+              "RelativeDocumentMoniker": "rise_gs\\DTOs\\TrilhaObjetivo\\TrilhaObjetivoDto.cs",
+              "ToolTip": "C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\DTOs\\TrilhaObjetivo\\TrilhaObjetivoDto.cs",
+              "RelativeToolTip": "rise_gs\\DTOs\\TrilhaObjetivo\\TrilhaObjetivoDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T00:02:50.588Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "TrilhaObjetivoUpdateDto.cs",
+              "DocumentMoniker": "C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\DTOs\\TrilhaObjetivo\\TrilhaObjetivoUpdateDto.cs",
+              "RelativeDocumentMoniker": "rise_gs\\DTOs\\TrilhaObjetivo\\TrilhaObjetivoUpdateDto.cs",
+              "ToolTip": "C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\DTOs\\TrilhaObjetivo\\TrilhaObjetivoUpdateDto.cs",
+              "RelativeToolTip": "rise_gs\\DTOs\\TrilhaObjetivo\\TrilhaObjetivoUpdateDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T00:03:15.618Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "TrilhaProgressoDtos.cs",
+              "DocumentMoniker": "C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\DTOs\\TrilhaProgresso\\TrilhaProgressoDtos.cs",
+              "RelativeDocumentMoniker": "rise_gs\\DTOs\\TrilhaProgresso\\TrilhaProgressoDtos.cs",
+              "ToolTip": "C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\DTOs\\TrilhaProgresso\\TrilhaProgressoDtos.cs",
+              "RelativeToolTip": "rise_gs\\DTOs\\TrilhaProgresso\\TrilhaProgressoDtos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T01:13:19.311Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "CursoController.cs",
+              "DocumentMoniker": "C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\Controllers\\CursoController.cs",
+              "RelativeDocumentMoniker": "rise_gs\\Controllers\\CursoController.cs",
+              "ToolTip": "C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\Controllers\\CursoController.cs",
+              "RelativeToolTip": "rise_gs\\Controllers\\CursoController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T00:52:15.785Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "BemEstarController.cs",
+              "DocumentMoniker": "C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\Controllers\\BemEstarController.cs",
+              "RelativeDocumentMoniker": "rise_gs\\Controllers\\BemEstarController.cs",
+              "ToolTip": "C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\Controllers\\BemEstarController.cs",
+              "RelativeToolTip": "rise_gs\\Controllers\\BemEstarController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-18T23:53:47.919Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "BemEstarCreateDto.cs",
+              "DocumentMoniker": "C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\DTOs\\BemEstar\\BemEstarCreateDto.cs",
+              "RelativeDocumentMoniker": "rise_gs\\DTOs\\BemEstar\\BemEstarCreateDto.cs",
+              "ToolTip": "C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\DTOs\\BemEstar\\BemEstarCreateDto.cs",
+              "RelativeToolTip": "rise_gs\\DTOs\\BemEstar\\BemEstarCreateDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T01:13:08.415Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "PagedResponse.cs",
+              "DocumentMoniker": "C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\DTOs\\PagedResponse.cs",
+              "RelativeDocumentMoniker": "rise_gs\\DTOs\\PagedResponse.cs",
+              "ToolTip": "C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\DTOs\\PagedResponse.cs",
+              "RelativeToolTip": "rise_gs\\DTOs\\PagedResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T00:17:50.689Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "LinkDto.cs",
+              "DocumentMoniker": "C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\DTOs\\LinkDto.cs",
+              "RelativeDocumentMoniker": "rise_gs\\DTOs\\LinkDto.cs",
+              "ToolTip": "C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\DTOs\\LinkDto.cs",
+              "RelativeToolTip": "rise_gs\\DTOs\\LinkDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T00:17:55.629Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "UsuarioUpdateDto.cs",
+              "DocumentMoniker": "C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\DTOs\\Usuario\\UsuarioUpdateDto.cs",
+              "RelativeDocumentMoniker": "rise_gs\\DTOs\\Usuario\\UsuarioUpdateDto.cs",
+              "ToolTip": "C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\DTOs\\Usuario\\UsuarioUpdateDto.cs",
+              "RelativeToolTip": "rise_gs\\DTOs\\Usuario\\UsuarioUpdateDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-18T23:56:39.345Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "UsuarioDto.cs",
+              "DocumentMoniker": "C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\DTOs\\Usuario\\UsuarioDto.cs",
+              "RelativeDocumentMoniker": "rise_gs\\DTOs\\Usuario\\UsuarioDto.cs",
+              "ToolTip": "C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\DTOs\\Usuario\\UsuarioDto.cs",
+              "RelativeToolTip": "rise_gs\\DTOs\\Usuario\\UsuarioDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T01:13:26.585Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "UsuarioCreateDto.cs",
+              "DocumentMoniker": "C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\DTOs\\Usuario\\UsuarioCreateDto.cs",
+              "RelativeDocumentMoniker": "rise_gs\\DTOs\\Usuario\\UsuarioCreateDto.cs",
+              "ToolTip": "C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\DTOs\\Usuario\\UsuarioCreateDto.cs",
+              "RelativeToolTip": "rise_gs\\DTOs\\Usuario\\UsuarioCreateDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T00:06:54.496Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "CursoUpdateDto.cs",
+              "DocumentMoniker": "C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\DTOs\\Curso\\CursoUpdateDto.cs",
+              "RelativeDocumentMoniker": "rise_gs\\DTOs\\Curso\\CursoUpdateDto.cs",
+              "ToolTip": "C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\DTOs\\Curso\\CursoUpdateDto.cs",
+              "RelativeToolTip": "rise_gs\\DTOs\\Curso\\CursoUpdateDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T00:04:47.49Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "CursoDto.cs",
+              "DocumentMoniker": "C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\DTOs\\Curso\\CursoDto.cs",
+              "RelativeDocumentMoniker": "rise_gs\\DTOs\\Curso\\CursoDto.cs",
+              "ToolTip": "C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\DTOs\\Curso\\CursoDto.cs",
+              "RelativeToolTip": "rise_gs\\DTOs\\Curso\\CursoDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T00:04:44.442Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "CursoCreateDto.cs",
+              "DocumentMoniker": "C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\DTOs\\Curso\\CursoCreateDto.cs",
+              "RelativeDocumentMoniker": "rise_gs\\DTOs\\Curso\\CursoCreateDto.cs",
+              "ToolTip": "C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\DTOs\\Curso\\CursoCreateDto.cs",
+              "RelativeToolTip": "rise_gs\\DTOs\\Curso\\CursoCreateDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T01:13:12.43Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "BemEstarUpdateDto.cs",
+              "DocumentMoniker": "C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\DTOs\\BemEstar\\BemEstarUpdateDto.cs",
+              "RelativeDocumentMoniker": "rise_gs\\DTOs\\BemEstar\\BemEstarUpdateDto.cs",
+              "ToolTip": "C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\DTOs\\BemEstar\\BemEstarUpdateDto.cs",
+              "RelativeToolTip": "rise_gs\\DTOs\\BemEstar\\BemEstarUpdateDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T01:13:11.158Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "BemEstarDto.cs",
+              "DocumentMoniker": "C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\DTOs\\BemEstar\\BemEstarDto.cs",
+              "RelativeDocumentMoniker": "rise_gs\\DTOs\\BemEstar\\BemEstarDto.cs",
+              "ToolTip": "C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\DTOs\\BemEstar\\BemEstarDto.cs",
+              "RelativeToolTip": "rise_gs\\DTOs\\BemEstar\\BemEstarDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T00:08:14.493Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "TrilhaObjetivo.cs",
+              "DocumentMoniker": "C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\Models\\TrilhaObjetivo.cs",
+              "RelativeDocumentMoniker": "rise_gs\\Models\\TrilhaObjetivo.cs",
+              "ToolTip": "C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\Models\\TrilhaObjetivo.cs",
+              "RelativeToolTip": "rise_gs\\Models\\TrilhaObjetivo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-18T23:57:06.272Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

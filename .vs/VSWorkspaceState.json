@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\RiseTest\\Controllers",
+    "\\RiseTest\\Helpers",
+    "\\rise_gs",
+    "\\rise_gs\\Controllers",
+    "\\rise_gs\\DTOs\\BemEstar",
+    "\\rise_gs\\DTOs\\Curriculo",
+    "\\rise_gs\\DTOs\\Curso",
+    "\\rise_gs\\DTOs\\Usuario",
+    "\\rise_gs\\Services"
+  ],
+  "SelectedNode": "\\rise_gs\\appsettings.json",
+  "PreviewInSolutionExplorer": false
+}
