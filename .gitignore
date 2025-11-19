@@ -1,0 +1,84 @@
+﻿## 🔹 BUILD & OUTPUT
+bin/
+obj/
+out/
+artifacts/
+*.exe
+*.dll
+*.pdb
+*.cache
+*.log
+
+## 🔹 VISUAL STUDIO
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## 🔹 RIDER / RESHARPER / JETBRAINS
+.idea/
+*.DotSettings.user
+
+## 🔹 VS CODE
+.vscode/
+.history/
+*.code-workspace
+
+## 🔹 DOTNET CORE
+project.lock.json
+project.fragment.lock.json
+*.dbmdl
+*.deps.json
+*.runtimeconfig.json
+
+## 🔹 NODE (caso haja front junto)
+node_modules/
+npm-debug.log
+yarn-error.log
+.pnpm-store/
+
+## 🔹 SISTEMA
+Thumbs.db
+.DS_Store
+desktop.ini
+
+## 🔹 TEST RESULTS
+TestResults/
+*.trx
+*.coverage
+*.coverlet.json
+*.nunit.xml
+
+## 🔹 PACOTES & DEPENDÊNCIAS
+packages/
+*.nupkg
+
+## 🔹 AMBIENTES & SEGREDOS
+.env
+*.env.*
+*.key
+*secret*.json
+
+## 🔹 JWT / AUTH
+appsettings.Development.json
+appsettings.Local.json
+
+# ⚠ mas MANTÉM o appsettings.json principal:
+!appsettings.json
+
+## 🔹 MIGRATIONS GERADAS
+# (descomente caso queira ignorá-las)
+# Migrations/
+
+## 🔹 BANCO LOCAL
+*.mdf
+*.ldf
+*.db
+*.sqlite
+*.sqlite3
+
+## 🔹 DOCUMENTOS QUE NÃO DEVEM SUBIR
+*.docx
+*.pdf
+*.xlsx

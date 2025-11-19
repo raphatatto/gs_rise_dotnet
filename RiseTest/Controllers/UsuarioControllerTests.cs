@@ -1,22 +1,31 @@
 ﻿using FluentAssertions;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 using rise_gs.Controllers;
-using rise_gs.DTOs;
-using rise_gs.DTOs;
+using rise_gs.DTOs.Usuario;      // 👈 DTOs de usuário (LoginRequestDto, UsuarioCreateDto etc.)
 using rise_gs.Models;
+using rise_gs.Services;          // 👈 JwtSettings e TokenService
 using RiseTest.Helpers;
 using System.Text.Json;
 using System.Threading.Tasks;
 using Xunit;
+
 namespace RiseTest.Controllers
 {
     public class UsuarioControllerTests
     {
+        /// <summary>
+        /// Cria um UsuarioController com:
+        /// - DbContext em memória preenchido
+        /// - Logger
+        /// - TokenService com JwtSettings de teste
+        /// </summary>
         private UsuarioController CreateControllerWithData()
         {
             var context = TestDbContextFactory.CreateInMemoryContext();
 
+            // Seed de usuários de teste
             context.Usuarios.Add(new Usuario
             {
                 IdUsuario = 1,
@@ -37,9 +46,21 @@ namespace RiseTest.Controllers
 
             context.SaveChanges();
 
-            var logger = LoggerFactory.Create(b => b.AddDebug()).CreateLogger<UsuarioController>();
+            var loggerFactory = LoggerFactory.Create(builder => builder.AddDebug());
+            var logger = loggerFactory.CreateLogger<UsuarioController>();
 
-            return new UsuarioController(context, logger);
+            // JwtSettings de TESTE (não usar em produção)
+            var jwtSettings = new JwtSettings
+            {
+                Key = "ChaveDeTesteSuperSegura_1234567890_TESTE", // >= 32 chars
+                Issuer = "rise-api-tests",
+                Audience = "rise-api-tests",
+                ExpireMinutes = 60
+            };
+
+            var tokenService = new TokenService(Options.Create(jwtSettings));
+
+            return new UsuarioController(context, logger, tokenService);
         }
 
         [Fact]
@@ -65,7 +86,7 @@ namespace RiseTest.Controllers
             var totalItems = root.GetProperty("totalItems").GetInt32();
             totalItems.Should().Be(2);
 
-            // opcional: garantir que vieram 2 items na coleção
+            // garantir que vieram 2 items na coleção
             var items = root.GetProperty("items");
             items.GetArrayLength().Should().Be(2);
         }
@@ -74,24 +95,11 @@ namespace RiseTest.Controllers
         public async Task Login_ComCredenciaisValidas_DeveRetornarOk()
         {
             // Arrange
-            var context = TestDbContextFactory.CreateInMemoryContext();
-
-            context.Usuarios.Add(new Usuario
-            {
-                IdUsuario = 1,
-                NomeUsuario = "raphaela",
-                EmailUsuario = "rapha@example.com",
-                SenhaUsuario = "123456",
-                TipoUsuario = "cliente"
-            });
-            context.SaveChanges();
-
-            var logger = LoggerFactory.Create(b => b.AddDebug()).CreateLogger<UsuarioController>();
-            var controller = new UsuarioController(context, logger);
+            var controller = CreateControllerWithData();
 
             var dto = new LoginRequestDto
             {
-                NomeUsuario = "raphaela",
+                EmailUsuario = "rapha@example.com",
                 SenhaUsuario = "123456"
             };
 
@@ -103,39 +111,29 @@ namespace RiseTest.Controllers
             okResult.Should().NotBeNull();
             okResult!.StatusCode.Should().Be(200);
 
-            // Serializa pra JSON e verifica o campo "nomeUsuario"
             var json = JsonSerializer.Serialize(okResult.Value);
             using var doc = JsonDocument.Parse(json);
             var root = doc.RootElement;
 
+            // 👇 AGORA usando PascalCase, igual ao DTO
             var nomeUsuario = root.GetProperty("NomeUsuario").GetString();
-
             nomeUsuario.Should().Be("raphaela");
+
+            var token = root.GetProperty("Token").GetString();
+            token.Should().NotBeNullOrEmpty();
         }
+
 
         [Fact]
         public async Task Login_ComCredenciaisInvalidas_DeveRetornarUnauthorized()
         {
             // Arrange
-            var context = TestDbContextFactory.CreateInMemoryContext();
-
-            context.Usuarios.Add(new Usuario
-            {
-                IdUsuario = 1,
-                NomeUsuario = "raphaela",
-                EmailUsuario = "rapha@example.com",
-                SenhaUsuario = "123456",
-                TipoUsuario = "cliente"
-            });
-            context.SaveChanges();
-
-            var logger = LoggerFactory.Create(b => b.AddDebug()).CreateLogger<UsuarioController>();
-            var controller = new UsuarioController(context, logger);
+            var controller = CreateControllerWithData();
 
             var dto = new LoginRequestDto
             {
-                NomeUsuario = "raphaela",
-                SenhaUsuario = "errada"
+                EmailUsuario = "rapha@example.com",
+                SenhaUsuario = "senhaErrada"
             };
 
             // Act
