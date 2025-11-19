@@ -13,34 +13,13 @@ builder.Services.AddDbContext<RiseContext>(options =>
     options.UseOracle(builder.Configuration.GetConnectionString("OracleConnection")));
 
 // 🔹 Configura o JwtSettings a partir do appsettings.json
-var jwtSection = builder.Configuration.GetSection("Jwt");
-builder.Services.Configure<JwtSettings>(jwtSection);
+builder.Services.Configure<JwtSettings>(
+    builder.Configuration.GetSection("Jwt"));
 
-// 🔹 Faz o bind fortemente tipado e garante defaults úteis
-var jwtSettings = jwtSection.Get<JwtSettings>() ?? new JwtSettings();
-
-if (string.IsNullOrWhiteSpace(jwtSettings.Key))
-{
-    Console.WriteLine("⚠️  Jwt:Key não foi configurado. Aplicando valor padrão apenas para desenvolvimento.");
-    jwtSettings.Key = "SenhaSegura_super_grande_123!";
-}
-
-if (string.IsNullOrWhiteSpace(jwtSettings.Issuer))
-{
-    jwtSettings.Issuer = "rise-api";
-}
-
-if (string.IsNullOrWhiteSpace(jwtSettings.Audience))
-{
-    jwtSettings.Audience = "rise-clients";
-}
-
-if (jwtSettings.ExpireMinutes <= 0)
-{
-    jwtSettings.ExpireMinutes = 60;
-}
-
-var signingKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSettings.Key));
+// 🔹 Faz o bind fortemente tipado (usado abaixo)
+var jwtSettings = builder.Configuration
+    .GetSection("Jwt")
+    .Get<JwtSettings>() ?? new JwtSettings();
 
 // 🔹 Registra o TokenService na DI
 builder.Services.AddScoped<TokenService>();
@@ -62,7 +41,8 @@ builder.Services.AddAuthentication(options =>
         ValidateIssuerSigningKey = true,
         ValidIssuer = jwtSettings.Issuer,
         ValidAudience = jwtSettings.Audience,
-        IssuerSigningKey = signingKey
+        IssuerSigningKey = new SymmetricSecurityKey(
+            Encoding.UTF8.GetBytes(jwtSettings.Key))
     };
 });
 
