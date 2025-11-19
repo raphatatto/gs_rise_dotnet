@@ -1,54 +1,80 @@
+﻿using System.Diagnostics;
+using System.Text;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using rise_gs;
-using System.Diagnostics;
+using rise_gs.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// DbContext + Oracle
+// 🔹 DbContext (Oracle)
 builder.Services.AddDbContext<RiseContext>(options =>
     options.UseOracle(builder.Configuration.GetConnectionString("OracleConnection")));
 
-// Controllers
-builder.Services.AddControllers();
+// 🔹 Configura o JwtSettings a partir do appsettings.json
+builder.Services.Configure<JwtSettings>(
+    builder.Configuration.GetSection("Jwt"));
 
-// Swagger
+// 🔹 Faz o bind fortemente tipado (usado abaixo)
+var jwtSettings = builder.Configuration
+    .GetSection("Jwt")
+    .Get<JwtSettings>() ?? new JwtSettings();
+
+// 🔹 Registra o TokenService na DI
+builder.Services.AddScoped<TokenService>();
+
+// 🔹 Configura autenticação JWT
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+})
+.AddJwtBearer(options =>
+{
+    options.RequireHttpsMetadata = false; // em produção: true
+    options.SaveToken = true;
+    options.TokenValidationParameters = new TokenValidationParameters
+    {
+        ValidateIssuer = true,
+        ValidateAudience = true,
+        ValidateIssuerSigningKey = true,
+        ValidIssuer = jwtSettings.Issuer,
+        ValidAudience = jwtSettings.Audience,
+        IssuerSigningKey = new SymmetricSecurityKey(
+            Encoding.UTF8.GetBytes(jwtSettings.Key))
+    };
+});
+
+// 🔹 Controllers / Swagger / HealthChecks
+builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-
-// HealthChecks
 builder.Services.AddHealthChecks();
 
 var app = builder.Build();
 
-// Middleware de "tracing" simples: gera um TraceId por request
+// Middleware de tracing
 app.Use(async (context, next) =>
 {
     var traceId = Activity.Current?.Id ?? Guid.NewGuid().ToString();
-    context.Items["TraceId"] = traceId;
     context.Response.Headers["X-Trace-Id"] = traceId;
-
-    app.Logger.LogInformation("Request {TraceId} {Method} {Path}",
-        traceId,
-        context.Request.Method,
-        context.Request.Path);
-
     await next();
 });
 
-// Swagger
 if (app.Environment.IsDevelopment())
 {
+    app.UseDeveloperExceptionPage();
     app.UseSwagger();
     app.UseSwaggerUI();
 }
 
-// Health endpoint
+app.UseHttpsRedirection();
+
+app.UseAuthentication();  // 👈 JWT entra aqui
+app.UseAuthorization();
+
+app.MapControllers();
 app.MapHealthChecks("/health");
 
-app.UseHttpsRedirection();
-app.UseAuthorization();
-app.MapControllers();
-
 app.Run();
-
-public partial class Program { }

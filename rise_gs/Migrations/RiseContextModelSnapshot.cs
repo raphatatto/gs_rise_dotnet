@@ -27,7 +27,7 @@ namespace rise_gs.Migrations
                     b.Property<int>("IdBemEstar")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("NUMBER(10)")
-                        .HasColumnName("ID__BEM_ESTAR");
+                        .HasColumnName("ID_BEM_ESTAR");
 
                     OraclePropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdBemEstar"));
 
@@ -63,13 +63,11 @@ namespace rise_gs.Migrations
             modelBuilder.Entity("rise_gs.Models.Curriculo", b =>
                 {
                     b.Property<int>("IdCurriculo")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("NUMBER(10)")
                         .HasColumnName("ID_CURRICULO");
 
-                    b.Property<string>("Habilidades")
-                        .HasMaxLength(1000)
-                        .HasColumnType("NVARCHAR2(1000)")
-                        .HasColumnName("HABILIDADES");
+                    OraclePropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdCurriculo"));
 
                     b.Property<string>("ExperienciaProfissional")
                         .HasMaxLength(1000)
@@ -80,6 +78,12 @@ namespace rise_gs.Migrations
                         .HasMaxLength(1000)
                         .HasColumnType("NVARCHAR2(1000)")
                         .HasColumnName("FORMACAO");
+
+                    b.Property<string>("Habilidades")
+                        .IsRequired()
+                        .HasMaxLength(1000)
+                        .HasColumnType("NVARCHAR2(1000)")
+                        .HasColumnName("HABILIDADES");
 
                     b.Property<int>("IdUsuario")
                         .HasColumnType("NUMBER(10)")
@@ -104,7 +108,7 @@ namespace rise_gs.Migrations
                         .HasColumnType("TIMESTAMP(7)")
                         .HasColumnName("ULTIMA_ATUALIZACAO");
 
-                    b.HasKey("IdCurriculo", "Habilidades")
+                    b.HasKey("IdCurriculo")
                         .HasName("PK_RISE_CURRICULO");
 
                     b.HasIndex("IdUsuario");
@@ -122,13 +126,13 @@ namespace rise_gs.Migrations
                     OraclePropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdCurso"));
 
                     b.Property<string>("AreaCurso")
-                        .HasMaxLength(50)
-                        .HasColumnType("NVARCHAR2(50)")
+                        .HasMaxLength(500)
+                        .HasColumnType("NVARCHAR2(500)")
                         .HasColumnName("AREA_CURSO");
 
                     b.Property<string>("DescCurso")
-                        .HasMaxLength(50)
-                        .HasColumnType("NVARCHAR2(50)")
+                        .HasMaxLength(500)
+                        .HasColumnType("NVARCHAR2(500)")
                         .HasColumnName("DESC_CURSO");
 
                     b.Property<int>("IdUsuario")
@@ -136,13 +140,13 @@ namespace rise_gs.Migrations
                         .HasColumnName("ID_USUARIO");
 
                     b.Property<string>("LinkCurso")
-                        .HasMaxLength(150)
-                        .HasColumnType("NVARCHAR2(150)")
+                        .HasMaxLength(500)
+                        .HasColumnType("NVARCHAR2(500)")
                         .HasColumnName("LINK_CURSO");
 
                     b.Property<string>("NomeCurso")
-                        .HasMaxLength(50)
-                        .HasColumnType("NVARCHAR2(50)")
+                        .HasMaxLength(500)
+                        .HasColumnType("NVARCHAR2(500)")
                         .HasColumnName("NOME_CURSO");
 
                     b.HasKey("IdCurso")
@@ -153,11 +157,75 @@ namespace rise_gs.Migrations
                     b.ToTable("TB_RISE_CURSO", (string)null);
                 });
 
+            modelBuilder.Entity("rise_gs.Models.TrilhaObjetivo", b =>
+                {
+                    b.Property<int>("IdObjetivo")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("NUMBER(10)")
+                        .HasColumnName("ID_OBJETIVO");
+
+                    OraclePropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdObjetivo"));
+
+                    b.Property<string>("CategoriaObjetivo")
+                        .HasMaxLength(500)
+                        .HasColumnType("NVARCHAR2(500)")
+                        .HasColumnName("CATEGORIA_OBJETIVO");
+
+                    b.Property<string>("Concluido")
+                        .HasMaxLength(1)
+                        .HasColumnType("NVARCHAR2(1)")
+                        .HasColumnName("CONCLUIDO");
+
+                    b.Property<DateTime?>("DataConclusao")
+                        .HasColumnType("TIMESTAMP(7)")
+                        .HasColumnName("DATA_CONCLUSAO");
+
+                    b.Property<DateTime?>("DataPlanejada")
+                        .HasColumnType("TIMESTAMP(7)")
+                        .HasColumnName("DATA_PLANEJADA");
+
+                    b.Property<DateTime?>("DtCriacao")
+                        .HasColumnType("TIMESTAMP(7)")
+                        .HasColumnName("DT_CRIACAO");
+
+                    b.Property<int>("IdTrilha")
+                        .HasColumnType("NUMBER(10)")
+                        .HasColumnName("ID_TRILHA");
+
+                    b.Property<string>("TituloObjetivo")
+                        .HasMaxLength(500)
+                        .HasColumnType("NVARCHAR2(500)")
+                        .HasColumnName("TITULO_OBJETIVO");
+
+                    b.HasKey("IdObjetivo")
+                        .HasName("PK_TRILHA_OBJETIVO");
+
+                    b.HasIndex("IdTrilha");
+
+                    b.ToTable("TB_RISE_TRILHA_OBJETIVO", (string)null);
+                });
+
             modelBuilder.Entity("rise_gs.Models.TrilhaProgresso", b =>
                 {
-                    b.Property<int>("IdUsuario")
+                    b.Property<int>("IdTrilha")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("NUMBER(10)")
-                        .HasColumnName("ID_USUARIO");
+                        .HasColumnName("ID_TRILHA");
+
+                    OraclePropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdTrilha"));
+
+                    b.Property<string>("CategoriaTrilha")
+                        .HasMaxLength(500)
+                        .HasColumnType("NVARCHAR2(500)")
+                        .HasColumnName("CATEGORIA_TRILHA");
+
+                    b.Property<DateTime?>("DataPlanejada")
+                        .HasColumnType("TIMESTAMP(7)")
+                        .HasColumnName("DATA_PLANEJADA");
+
+                    b.Property<DateTime?>("DtCriacao")
+                        .HasColumnType("TIMESTAMP(7)")
+                        .HasColumnName("DT_CRIACAO");
 
                     b.Property<DateTime?>("DtInicio")
                         .HasColumnType("TIMESTAMP(7)")
@@ -167,12 +235,23 @@ namespace rise_gs.Migrations
                         .HasColumnType("TIMESTAMP(7)")
                         .HasColumnName("DT_ULTIMA_ATUALIZACAO");
 
+                    b.Property<int>("IdUsuario")
+                        .HasColumnType("NUMBER(10)")
+                        .HasColumnName("ID_USUARIO");
+
                     b.Property<int?>("PercentualConcluido")
                         .HasColumnType("NUMBER(10)")
                         .HasColumnName("PERCENTUAL_CONCLUIDO");
 
-                    b.HasKey("IdUsuario")
-                        .HasName("PK_RISE_TRILHA_PROGRESSO");
+                    b.Property<string>("TituloTrilha")
+                        .HasMaxLength(500)
+                        .HasColumnType("NVARCHAR2(500)")
+                        .HasColumnName("TITULO_TRILHA");
+
+                    b.HasKey("IdTrilha")
+                        .HasName("PK_TRILHA_PROGResso");
+
+                    b.HasIndex("IdUsuario");
 
                     b.ToTable("TB_RISE_TRILHA_PROGRESSO", (string)null);
                 });
@@ -186,16 +265,26 @@ namespace rise_gs.Migrations
 
                     OraclePropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdUsuario"));
 
+                    b.Property<string>("Descricao")
+                        .HasMaxLength(500)
+                        .HasColumnType("NVARCHAR2(500)")
+                        .HasColumnName("DESC");
+
                     b.Property<string>("EmailUsuario")
                         .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("NVARCHAR2(50)")
                         .HasColumnName("EMAIL_USUARIO");
 
+                    b.Property<string>("Habilidades")
+                        .HasMaxLength(500)
+                        .HasColumnType("NVARCHAR2(500)")
+                        .HasColumnName("HABILIDADES");
+
                     b.Property<string>("NomeUsuario")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("NVARCHAR2(50)")
+                        .HasMaxLength(500)
+                        .HasColumnType("NVARCHAR2(500)")
                         .HasColumnName("NOME__USUARIO");
 
                     b.Property<string>("SenhaUsuario")
@@ -203,6 +292,11 @@ namespace rise_gs.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("NVARCHAR2(50)")
                         .HasColumnName("SENHA_USUARIO");
+
+                    b.Property<string>("Telefone")
+                        .HasMaxLength(20)
+                        .HasColumnType("NVARCHAR2(20)")
+                        .HasColumnName("TELEFONE");
 
                     b.Property<string>("TipoUsuario")
                         .HasMaxLength(50)
@@ -222,7 +316,7 @@ namespace rise_gs.Migrations
                         .HasForeignKey("IdUsuario")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired()
-                        .HasConstraintName("FK_RISE_BEM_ESTAR_USUARIO");
+                        .HasConstraintName("FK_BEM_ESTAr_USUARIO");
 
                     b.Navigation("Usuario");
                 });
@@ -234,7 +328,7 @@ namespace rise_gs.Migrations
                         .HasForeignKey("IdUsuario")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired()
-                        .HasConstraintName("FK_RISE_CURRICULO_USUARIO");
+                        .HasConstraintName("FK_CURRICULO_USUARIO");
 
                     b.Navigation("Usuario");
                 });
@@ -246,21 +340,38 @@ namespace rise_gs.Migrations
                         .HasForeignKey("IdUsuario")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired()
-                        .HasConstraintName("FK_RISE_CURSO_USUARIO");
+                        .HasConstraintName("FK_CURSO_USUARIO");
+
+                    b.Navigation("Usuario");
+                });
+
+            modelBuilder.Entity("rise_gs.Models.TrilhaObjetivo", b =>
+                {
+                    b.HasOne("rise_gs.Models.TrilhaProgresso", "Trilha")
+                        .WithMany("Objetivos")
+                        .HasForeignKey("IdTrilha")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired()
+                        .HasConstraintName("FK_OBJETIVO_TRILHA");
+
+                    b.Navigation("Trilha");
+                });
+
+            modelBuilder.Entity("rise_gs.Models.TrilhaProgresso", b =>
+                {
+                    b.HasOne("rise_gs.Models.Usuario", "Usuario")
+                        .WithMany("Trilhas")
+                        .HasForeignKey("IdUsuario")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired()
+                        .HasConstraintName("FK_TRILHA_USUARIO");
 
                     b.Navigation("Usuario");
                 });
 
             modelBuilder.Entity("rise_gs.Models.TrilhaProgresso", b =>
                 {
-                    b.HasOne("rise_gs.Models.Usuario", "Usuario")
-                        .WithOne("TrilhaProgresso")
-                        .HasForeignKey("rise_gs.Models.TrilhaProgresso", "IdUsuario")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired()
-                        .HasConstraintName("FK_RISE_PROGRESSO_USUARIO");
-
-                    b.Navigation("Usuario");
+                    b.Navigation("Objetivos");
                 });
 
             modelBuilder.Entity("rise_gs.Models.Usuario", b =>
@@ -271,7 +382,7 @@ namespace rise_gs.Migrations
 
                     b.Navigation("RegistrosBemEstar");
 
-                    b.Navigation("TrilhaProgresso");
+                    b.Navigation("Trilhas");
                 });
 #pragma warning restore 612, 618
         }

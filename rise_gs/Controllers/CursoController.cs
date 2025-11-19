@@ -2,7 +2,6 @@
 using Microsoft.EntityFrameworkCore;
 using rise_gs.DTOs;
 using rise_gs.Models;
-using rise_gs.DTOs;
 namespace rise_gs.Controllers
 {
     [ApiController]

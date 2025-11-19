@@ -2,6 +2,9 @@
 using Microsoft.EntityFrameworkCore;
 using rise_gs.DTOs;
 using rise_gs.Models;
+using rise_gs.Services;
+using rise_gs.DTOs.Usuario;
+using Microsoft.AspNetCore.Authorization;
 
 namespace rise_gs.Controllers
 {
@@ -11,14 +14,18 @@ namespace rise_gs.Controllers
     {
         private readonly RiseContext _context;
         private readonly ILogger<UsuarioController> _logger;
+        private readonly TokenService _tokenService;   // 👈 ADICIONAR ISSO
 
-        public UsuarioController(RiseContext context, ILogger<UsuarioController> logger)
+        public UsuarioController(
+            RiseContext context,
+            ILogger<UsuarioController> logger,
+            TokenService tokenService)                  // já está certo aqui
         {
             _context = context;
             _logger = logger;
+            _tokenService = tokenService;              // 👈 E ISSO
         }
 
-        // GET api/v1/usuario?pageNumber=1&pageSize=10
         // GET api/v1/usuario?pageNumber=1&pageSize=10
         [HttpGet]
         public async Task<IActionResult> GetUsuarios(
@@ -41,11 +48,9 @@ namespace rise_gs.Controllers
                 .Take(pageSize)
                 .ToListAsync();
 
-            // helper local pra não quebrar se Url == null (como nos testes)
             string? BuildUrl(string actionName, object values)
                 => Url?.Action(actionName, values);
 
-            // Se Url for null (testes), os links vão ficar como null – ok.
             var collectionLinks = new List<object>
     {
         new {
@@ -160,7 +165,10 @@ namespace rise_gs.Controllers
                 NomeUsuario = dto.NomeUsuario,
                 EmailUsuario = dto.EmailUsuario,
                 SenhaUsuario = dto.SenhaUsuario,
-                TipoUsuario = dto.TipoUsuario
+                TipoUsuario = dto.TipoUsuario,
+                Telefone = dto.Telefone,
+                Descricao = dto.Descricao,
+                Habilidades = dto.Habilidades,
             };
 
             _context.Usuarios.Add(model);
@@ -172,7 +180,10 @@ namespace rise_gs.Controllers
                 model.IdUsuario,
                 model.NomeUsuario,
                 model.EmailUsuario,
-                model.TipoUsuario
+                model.TipoUsuario,
+                model.Telefone,
+                model.Descricao,
+                model.Habilidades,
             };
 
             return CreatedAtAction(nameof(GetUsuarioById),
@@ -182,34 +193,35 @@ namespace rise_gs.Controllers
 
         // POST api/v1/usuario/login
         [HttpPost("login")]
+        [AllowAnonymous]
         public async Task<IActionResult> Login([FromBody] LoginRequestDto dto)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            // Busca usuário pelo nome e senha
             var usuario = await _context.Usuarios
                 .AsNoTracking()
                 .FirstOrDefaultAsync(u =>
-                    u.NomeUsuario == dto.NomeUsuario &&
+                    u.EmailUsuario == dto.EmailUsuario &&
                     u.SenhaUsuario == dto.SenhaUsuario);
 
             if (usuario == null)
             {
-                // 401 Unauthorized se login falhar
-                return Unauthorized(new { message = "Nome de usuário ou senha inválidos." });
+                return Unauthorized(new { message = "E-mail ou senha inválidos." });
             }
 
-            // Nunca devolve a senha na resposta
-            var result = new
+            var token = _tokenService.GenerateToken(usuario);
+
+            var response = new LoginResponseDto
             {
-                usuario.IdUsuario,
-                usuario.NomeUsuario,
-                usuario.EmailUsuario,
-                usuario.TipoUsuario
+                Token = token,
+                ExpiraEm = DateTime.UtcNow.AddMinutes(60),
+                IdUsuario = usuario.IdUsuario,
+                NomeUsuario = usuario.NomeUsuario,
+                TipoUsuario = usuario.TipoUsuario
             };
 
-            return Ok(result); // 200 OK
+            return Ok(response);
         }
 
 
@@ -226,6 +238,10 @@ namespace rise_gs.Controllers
 
             usuario.NomeUsuario = dto.NomeUsuario;
             usuario.EmailUsuario = dto.EmailUsuario;
+            usuario.Telefone = dto.Telefone;
+            usuario.Descricao = dto.Descricao;
+            usuario.Habilidades = dto.Habilidades;
+            
 
             // Se quiser permitir não alterar a senha, só troca se vier algo:
             if (!string.IsNullOrWhiteSpace(dto.SenhaUsuario))
