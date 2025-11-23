@@ -14,7 +14,7 @@ Projeto de API em ASP.NET Core 8 que integra autenticação JWT, Oracle como ban
 | Tiago Ribeiro Capela| RM 554983 |
 
 ## Link do vídeo no YouTube
-Youtube: `https://youtube.com/...`
+[https://youtube.com/...](https://youtu.be/9obBaHbTsqs)
 
 ## Configuração
 1. Copie o arquivo `rise_gs/appsettings.json` ou use variáveis de ambiente para definir as seguintes chaves:
