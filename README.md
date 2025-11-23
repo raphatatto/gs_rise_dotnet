@@ -7,6 +7,15 @@ Projeto de API em ASP.NET Core 8 que integra autenticação JWT, Oracle como ban
 - Acesso a uma instância Oracle (string de conexão no formato `User Id=<usuario>;Password=<senha>;Data Source=<host>:<porta>/<service_name>;`).
 - Chaves para autenticação JWT e, opcionalmente, para a API Gemini.
 
+## Integrantes
+| Nome | RM |
+|------|-----|
+| Raphaela Oliveira Tatto | RM 554983 |
+| Tiago Ribeiro Capela| RM 554983 |
+
+## Link do vídeo no YouTube
+Youtube: `https://youtube.com/...`
+
 ## Configuração
 1. Copie o arquivo `rise_gs/appsettings.json` ou use variáveis de ambiente para definir as seguintes chaves:
    - `ConnectionStrings:OracleConnection` para apontar para seu banco Oracle.
@@ -20,10 +29,13 @@ Projeto de API em ASP.NET Core 8 que integra autenticação JWT, Oracle como ban
    dotnet restore
    ```
 2. Rode a aplicação Web API:
-   ```bash
-   dotnet run --project rise_gs
+    ```bash
+   cd rise_gs
    ```
-3. Acesse os endpoints principais:
+   ```bash
+   dotnet run 
+   ```
+4. Acesse os endpoints principais:
    - **Swagger UI:** `http://localhost:5085/swagger`
    - **Health check:** `http://localhost:5085/health`
 
@@ -32,14 +44,10 @@ Projeto de API em ASP.NET Core 8 que integra autenticação JWT, Oracle como ban
 ## Testes
 Execute a suíte de testes com:
 ```bash
+cd RiseTest
+```
+```bash
 dotnet test
 ```
 
-## Integrantes
-| Nome | RM | Contato |
-| --- | --- | --- |
-| _Preencha aqui_ | _RM_ | _Email/Telefone_ |
-| _Preencha aqui_ | _RM_ | _Email/Telefone_ |
 
-## Link do vídeo no YouTube
-Cole aqui o link da apresentação ou demonstração do projeto: `https://youtube.com/...`
