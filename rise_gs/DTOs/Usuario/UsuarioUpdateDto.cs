@@ -1,4 +1,4 @@
-﻿namespace rise_gs.DTOs
+﻿namespace rise_gs.DTOs.Usuario
 {
     public class UsuarioUpdateDto
     {

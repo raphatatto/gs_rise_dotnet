@@ -14,22 +14,19 @@ namespace rise_gs.Controllers
     {
         private readonly RiseContext _context;
         private readonly ILogger<UsuarioController> _logger;
-        private readonly TokenService _tokenService;   // 👈 ADICIONAR ISSO
+        private readonly TokenService _tokenService;
 
         public UsuarioController(
             RiseContext context,
             ILogger<UsuarioController> logger,
-            TokenService tokenService)                  // já está certo aqui
+            TokenService tokenService)
         {
             _context = context;
             _logger = logger;
-            _tokenService = tokenService;              // 👈 E ISSO
+            _tokenService = tokenService;
         }
 
-<<<<<<< HEAD
         // GET api/v1/usuario?pageNumber=1&pageSize=10
-=======
->>>>>>> bd27691 (adicionando IA)
         [HttpGet]
         public async Task<IActionResult> GetUsuarios(int pageNumber = 1, int pageSize = 10)
         {
@@ -50,8 +47,6 @@ namespace rise_gs.Controllers
             string? BuildUrl(string actionName, object values)
                 => Url?.Action(actionName, values);
 
-<<<<<<< HEAD
-=======
             var items = usuarios.Select(u => new
             {
                 u.IdUsuario,
@@ -69,7 +64,6 @@ namespace rise_gs.Controllers
                 }
             });
 
->>>>>>> bd27691 (adicionando IA)
             var collectionLinks = new List<object>
             {
                 new { rel = "self", href = BuildUrl(nameof(GetUsuarios), new { pageNumber, pageSize }), method = "GET" }
@@ -129,36 +123,26 @@ namespace rise_gs.Controllers
                 TipoUsuario = dto.TipoUsuario,
                 Telefone = dto.Telefone,
                 Descricao = dto.Descricao,
-<<<<<<< HEAD
                 Habilidades = dto.Habilidades,
-=======
-                Habilidades = dto.Habilidades
->>>>>>> bd27691 (adicionando IA)
             };
 
             _context.Usuarios.Add(model);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction(nameof(GetUsuarioById), new { id = model.IdUsuario }, new
+            var result = new
             {
                 model.IdUsuario,
                 model.NomeUsuario,
                 model.EmailUsuario,
                 model.TipoUsuario,
                 model.Telefone,
-<<<<<<< HEAD
-                model.Descricao,
-                model.Habilidades,
+                descricao = model.Descricao,
+                habilidades = model.Habilidades
             };
 
             return CreatedAtAction(nameof(GetUsuarioById),
                 new { id = model.IdUsuario },
                 result);
-=======
-                descricao = model.Descricao,
-                habilidades = model.Habilidades
-            });
->>>>>>> bd27691 (adicionando IA)
         }
 
         [HttpPost("login")]
@@ -174,7 +158,6 @@ namespace rise_gs.Controllers
                     u.SenhaUsuario == dto.SenhaUsuario);
 
             if (usuario == null)
-<<<<<<< HEAD
             {
                 return Unauthorized(new { message = "E-mail ou senha inválidos." });
             }
@@ -191,20 +174,6 @@ namespace rise_gs.Controllers
             };
 
             return Ok(response);
-=======
-                return Unauthorized("E-mail ou senha inválidos.");
-
-            return Ok(new
-            {
-                idUsuario = usuario.IdUsuario,
-                nomeUsuario = usuario.NomeUsuario,
-                emailUsuario = usuario.EmailUsuario,
-                tipoUsuario = usuario.TipoUsuario,
-                telefone = usuario.Telefone,
-                descricao = usuario.Descricao,
-                habilidades = usuario.Habilidades
-            });
->>>>>>> bd27691 (adicionando IA)
         }
 
         [HttpPut("{id:int}")]
@@ -217,17 +186,10 @@ namespace rise_gs.Controllers
 
             usuario.NomeUsuario = dto.NomeUsuario;
             usuario.EmailUsuario = dto.EmailUsuario;
-<<<<<<< HEAD
-            usuario.Telefone = dto.Telefone;
-            usuario.Descricao = dto.Descricao;
-            usuario.Habilidades = dto.Habilidades;
-            
-=======
             usuario.TipoUsuario = dto.TipoUsuario;
             usuario.Telefone = dto.Telefone;
             usuario.Descricao = dto.Descricao;
             usuario.Habilidades = dto.Habilidades;
->>>>>>> bd27691 (adicionando IA)
 
             if (!string.IsNullOrWhiteSpace(dto.SenhaUsuario))
                 usuario.SenhaUsuario = dto.SenhaUsuario;

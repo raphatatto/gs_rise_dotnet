@@ -1,4 +1,4 @@
-namespace rise_gs.DTOs
+namespace rise_gs.DTOs.TrilhaObjetivo
 {
     public class TrilhaObjetivoCreateDto
     {
@@ -6,6 +6,8 @@ namespace rise_gs.DTOs
         public string TituloObjetivo { get; set; } = null!;
         public string? CategoriaObjetivo { get; set; }
         public DateTime? DataPlanejada { get; set; }
-        public bool Concluido { get; set; } = false;   // padrão = não concluído
-    }
+        public bool Concluido { get; set; } = false; 
+        
+        public int IdUsuario { get; set; }
+        }
 }

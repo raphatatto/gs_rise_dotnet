@@ -5,21 +5,21 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using rise_gs;
 using rise_gs.Services;
-<<<<<<< HEAD
 
 var builder = WebApplication.CreateBuilder(args);
 
-// DbContext
+// ===================== DB CONTEXT =====================
 builder.Services.AddDbContext<RiseContext>(options =>
     options.UseOracle(builder.Configuration.GetConnectionString("OracleConnection")));
 
+// ===================== JWT CONFIG =====================
 // Configura seção Jwt para o TokenService
 builder.Services.Configure<JwtSettings>(builder.Configuration.GetSection("Jwt"));
 
-// 🔹 PEGA AS CONFIGS BRUTAS
+// Pega config bruta
 var config = builder.Configuration;
 
-// 🔹 Lê a Key diretamente (e garante fallback)
+// Key
 var jwtKey = config["Jwt:Key"];
 if (string.IsNullOrWhiteSpace(jwtKey))
 {
@@ -44,7 +44,7 @@ builder.Services
     })
     .AddJwtBearer(options =>
     {
-        options.RequireHttpsMetadata = false; // em prod: true
+        options.RequireHttpsMetadata = false; // em produção: true
         options.SaveToken = true;
         options.TokenValidationParameters = new TokenValidationParameters
         {
@@ -57,23 +57,16 @@ builder.Services
         };
     });
 
-// Controllers / Swagger / etc.
-=======
-using System.Diagnostics;
-
-var builder = WebApplication.CreateBuilder(args);
-
-builder.Services.AddDbContext<RiseContext>(options =>
-    options.UseOracle(builder.Configuration.GetConnectionString("OracleConnection")));
-
->>>>>>> bd27691 (adicionando IA)
+// ===================== SERVICES GERAIS =====================
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddHealthChecks();
 
+// IA Currículo
 builder.Services.AddHttpClient<IAiCurriculoService, AiCurriculoService>();
 
+// CORS
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("DevCors", policy =>
@@ -87,13 +80,9 @@ builder.Services.AddCors(options =>
 
 var app = builder.Build();
 
-<<<<<<< HEAD
-// tracing simples
-=======
-app.UseRouting();
-app.UseCors("DevCors");
+// ===================== MIDDLEWARE =====================
 
->>>>>>> bd27691 (adicionando IA)
+// tracing simples
 app.Use(async (context, next) =>
 {
     var traceId = Activity.Current?.Id ?? Guid.NewGuid().ToString();
@@ -108,8 +97,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-<<<<<<< HEAD
 app.UseHttpsRedirection();
+
+app.UseCors("DevCors");
 
 app.UseAuthentication();
 app.UseAuthorization();
@@ -117,10 +107,4 @@ app.UseAuthorization();
 app.MapControllers();
 app.MapHealthChecks("/health");
 
-=======
-app.MapHealthChecks("/health");
-app.UseHttpsRedirection();
-app.UseAuthorization();
-app.MapControllers();
->>>>>>> bd27691 (adicionando IA)
 app.Run();

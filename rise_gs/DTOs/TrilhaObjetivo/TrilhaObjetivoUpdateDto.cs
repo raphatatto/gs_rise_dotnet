@@ -1,5 +1,5 @@
 
-namespace rise_gs.DTOs
+namespace rise_gs.DTOs.TrilhaObjetivo
 {
 	public class TrilhaObjetivoUpdateDto
 	{
