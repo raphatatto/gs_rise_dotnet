@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using rise_gs;
 using rise_gs.Services;
-
+using rise_gs.ML;
 var builder = WebApplication.CreateBuilder(args);
 
 // ===================== DB CONTEXT =====================
@@ -77,7 +77,7 @@ builder.Services.AddCors(options =>
             .AllowAnyMethod();
     });
 });
-
+builder.Services.AddSingleton<SentimentService>();
 var app = builder.Build();
 
 // ===================== MIDDLEWARE =====================
