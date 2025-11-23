@@ -5,6 +5,7 @@ using rise_gs.Models;
 
 namespace rise_gs.Controllers
 {
+<<<<<<< HEAD
 	[ApiController]
 	[Route("api/v1/[controller]")]
 	public class TrilhaObjetivoController : ControllerBase
@@ -167,4 +168,107 @@ namespace rise_gs.Controllers
 			return NoContent();
 		}
 	}
+=======
+    [ApiController]
+    [Route("api/v1/[controller]")]
+    public class TrilhaObjetivoController : ControllerBase
+    {
+        private readonly RiseContext _context;
+
+        public TrilhaObjetivoController(RiseContext context)
+        {
+            _context = context;
+        }
+
+        [HttpGet("usuario/{idUsuario:int}")]
+        public async Task<IActionResult> GetObjetivosByUsuario(int idUsuario)
+        {
+            var trilha = await _context.TrilhasProgresso
+                .AsNoTracking()
+                .FirstOrDefaultAsync(t => t.IdUsuario == idUsuario);
+
+            if (trilha == null)
+                return NotFound();
+
+            var objetivos = await _context.TrilhasObjetivos
+                .AsNoTracking()
+                .Where(o => o.IdTrilha == trilha.IdTrilha)
+                .OrderByDescending(o => o.DtCriacao)
+                .ToListAsync();
+
+            return Ok(objetivos);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Create([FromBody] TrilhaObjetivoCreateDto dto)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            var trilha = await _context.TrilhasProgresso
+                .FirstOrDefaultAsync(t => t.IdUsuario == dto.IdUsuario);
+
+            if (trilha == null)
+                return NotFound("TrilhaProgresso não encontrada para este usuário.");
+
+            var objetivo = new TrilhaObjetivo
+            {
+                TituloObjetivo = dto.TituloObjetivo,
+                CategoriaObjetivo = dto.CategoriaObjetivo,
+                DataPlanejada = dto.DataPlanejada,
+                Concluido = "N",
+                DataConclusao = null,
+                DtCriacao = DateTime.UtcNow,
+                IdTrilha = trilha.IdTrilha
+            };
+
+            _context.TrilhasObjetivos.Add(objetivo);
+            await _context.SaveChangesAsync();
+
+            return CreatedAtAction(nameof(GetObjetivosByUsuario),
+                new { idUsuario = dto.IdUsuario },
+                objetivo);
+        }
+
+        [HttpPut("{idObjetivo:int}")]
+        public async Task<IActionResult> Update(int idObjetivo, [FromBody] TrilhaObjetivoUpdateDto dto)
+        {
+            var objetivo = await _context.TrilhasObjetivos
+                .FirstOrDefaultAsync(o => o.IdObjetivo == idObjetivo);
+
+            if (objetivo == null)
+                return NotFound();
+
+            objetivo.TituloObjetivo = dto.TituloObjetivo ?? objetivo.TituloObjetivo;
+            objetivo.CategoriaObjetivo = dto.CategoriaObjetivo ?? objetivo.CategoriaObjetivo;
+            objetivo.DataPlanejada = dto.DataPlanejada ?? objetivo.DataPlanejada;
+
+            if (dto.Concluido != null)
+            {
+                objetivo.Concluido = dto.Concluido;
+                if (dto.Concluido == "S")
+                    objetivo.DataConclusao = DateTime.UtcNow;
+                else
+                    objetivo.DataConclusao = null;
+            }
+
+            await _context.SaveChangesAsync();
+            return NoContent();
+        }
+
+        [HttpDelete("{idObjetivo:int}")]
+        public async Task<IActionResult> Delete(int idObjetivo)
+        {
+            var objetivo = await _context.TrilhasObjetivos
+                .FirstOrDefaultAsync(o => o.IdObjetivo == idObjetivo);
+
+            if (objetivo == null)
+                return NotFound();
+
+            _context.TrilhasObjetivos.Remove(objetivo);
+            await _context.SaveChangesAsync();
+            return NoContent();
+        }
+    }
+>>>>>>> bd27691 (adicionando IA)
 }

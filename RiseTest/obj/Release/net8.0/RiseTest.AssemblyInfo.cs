@@ -14,7 +14,11 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RiseTest")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
+<<<<<<< HEAD
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+82589738e5ebebb7393857b74efa355548cee726")]
+=======
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6d46d3ead299639874961c607401f26c64353b19")]
+>>>>>>> bd27691 (adicionando IA)
 [assembly: System.Reflection.AssemblyProductAttribute("RiseTest")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RiseTest")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

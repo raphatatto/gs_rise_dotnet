@@ -18,17 +18,15 @@ namespace rise_gs.Controllers
             _logger = logger;
         }
 
-        // GET api/v1/curriculo?idUsuario=1
         [HttpGet]
         public async Task<IActionResult> GetCurriculos([FromQuery] int? idUsuario)
         {
-            _logger.LogInformation("Listando currículos. idUsuario = {idUsuario}", idUsuario);
-
             var query = _context.Curriculos.AsNoTracking();
 
             if (idUsuario.HasValue)
                 query = query.Where(c => c.IdUsuario == idUsuario.Value);
 
+<<<<<<< HEAD
             var curriculos = await query
                 .Select(c => new CurriculoDto
                 {
@@ -44,13 +42,16 @@ namespace rise_gs.Controllers
                 })
                 .ToListAsync();
 
+=======
+            var curriculos = await query.OrderByDescending(c => c.UltimaAtualizacao).ToListAsync();
+>>>>>>> bd27691 (adicionando IA)
             return Ok(curriculos);
         }
 
-        // GET api/v1/curriculo/5
         [HttpGet("{id:int}")]
         public async Task<IActionResult> GetCurriculoById(int id)
         {
+<<<<<<< HEAD
             var curriculo = await _context.Curriculos
                 .AsNoTracking()
                 .Where(c => c.IdCurriculo == id)
@@ -67,20 +68,50 @@ namespace rise_gs.Controllers
                     IdUsuario = c.IdUsuario
                 })
                 .FirstOrDefaultAsync();
+=======
+            var curriculo = await _context.Curriculos.AsNoTracking()
+                .FirstOrDefaultAsync(c => c.IdCurriculo == id);
+>>>>>>> bd27691 (adicionando IA)
 
-            if (curriculo == null)
-                return NotFound();
-
+            if (curriculo == null) return NotFound();
             return Ok(curriculo);
         }
 
-        // POST api/v1/curriculo
         [HttpPost]
+<<<<<<< HEAD
         public async Task<IActionResult> CreateCurriculo([FromBody] CurriculoCreateDto dto)
+=======
+        public async Task<IActionResult> UpsertCurriculo([FromBody] Curriculo model)
+>>>>>>> bd27691 (adicionando IA)
         {
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
+            if (!ModelState.IsValid) return BadRequest(ModelState);
 
+            if (model.IdUsuario <= 0)
+                return BadRequest(new { error = "IdUsuario é obrigatório." });
+
+            if (string.IsNullOrWhiteSpace(model.Habilidades))
+                return BadRequest(new { error = "Habilidades é obrigatório." });
+
+            var existing = await _context.Curriculos
+                .FirstOrDefaultAsync(c => c.IdUsuario == model.IdUsuario);
+
+            if (existing == null)
+            {
+                model.UltimaAtualizacao = model.UltimaAtualizacao ?? DateTime.UtcNow;
+                _context.Curriculos.Add(model);
+                await _context.SaveChangesAsync();
+                return CreatedAtAction(nameof(GetCurriculoById), new { id = model.IdCurriculo }, model);
+            }
+
+            existing.TituloCurriculo = model.TituloCurriculo;
+            existing.ExperienciaProfissional = model.ExperienciaProfissional;
+            existing.Habilidades = model.Habilidades;
+            existing.Formacao = model.Formacao;
+            existing.Projetos = model.Projetos;
+            existing.Links = model.Links;
+            existing.UltimaAtualizacao = model.UltimaAtualizacao ?? DateTime.UtcNow;
+
+<<<<<<< HEAD
             var entity = new Curriculo
             {
                 TituloCurriculo = dto.TituloCurriculo,
@@ -112,17 +143,25 @@ namespace rise_gs.Controllers
             return CreatedAtAction(nameof(GetCurriculoById),
                 new { id = entity.IdCurriculo },
                 response);
+=======
+            await _context.SaveChangesAsync();
+            return Ok(existing);
+>>>>>>> bd27691 (adicionando IA)
         }
 
-        // PUT api/v1/curriculo/5
         [HttpPut("{id:int}")]
         public async Task<IActionResult> UpdateCurriculo(int id, [FromBody] CurriculoUpdateDto dto)
         {
+<<<<<<< HEAD
             var curriculo = await _context.Curriculos.FirstOrDefaultAsync(c => c.IdCurriculo == id);
+=======
+            if (!ModelState.IsValid) return BadRequest(ModelState);
+>>>>>>> bd27691 (adicionando IA)
 
-            if (curriculo == null)
-                return NotFound();
+            var curriculo = await _context.Curriculos.FirstOrDefaultAsync(c => c.IdCurriculo == id);
+            if (curriculo == null) return NotFound();
 
+<<<<<<< HEAD
             // Apenas atualiza se veio no DTO
             curriculo.TituloCurriculo = dto.TituloCurriculo ?? curriculo.TituloCurriculo;
             curriculo.ExperienciaProfissional = dto.ExperienciaProfissional ?? curriculo.ExperienciaProfissional;
@@ -134,19 +173,32 @@ namespace rise_gs.Controllers
 
             if (dto.IdUsuario.HasValue)
                 curriculo.IdUsuario = dto.IdUsuario.Value;
+=======
+            curriculo.TituloCurriculo = model.TituloCurriculo;
+            curriculo.ExperienciaProfissional = model.ExperienciaProfissional;
+            curriculo.Habilidades = model.Habilidades;
+            curriculo.Formacao = model.Formacao;
+            curriculo.UltimaAtualizacao = model.UltimaAtualizacao ?? DateTime.UtcNow;
+            curriculo.Projetos = model.Projetos;
+            curriculo.Links = model.Links;
+            curriculo.IdUsuario = model.IdUsuario;
+>>>>>>> bd27691 (adicionando IA)
 
             await _context.SaveChangesAsync();
             return NoContent();
         }
 
-        // DELETE api/v1/curriculo/5
         [HttpDelete("{id:int}")]
         public async Task<IActionResult> DeleteCurriculo(int id)
         {
             var curriculo = await _context.Curriculos.FirstOrDefaultAsync(c => c.IdCurriculo == id);
+<<<<<<< HEAD
 
             if (curriculo == null)
                 return NotFound();
+=======
+            if (curriculo == null) return NotFound();
+>>>>>>> bd27691 (adicionando IA)
 
             _context.Curriculos.Remove(curriculo);
             await _context.SaveChangesAsync();

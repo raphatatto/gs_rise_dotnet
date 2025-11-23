@@ -1,9 +1,5 @@
 {
   "Version": 1,
-<<<<<<< HEAD
-  "WorkspaceRootPath": "C:\\Users\\rapha\\source\\repos\\raphatatto\\gs_rise_dotnet\\",
-  "Documents": [],
-=======
   "WorkspaceRootPath": "C:\\Users\\trc24\\\u00C1rea de Trabalho\\FIAP\\GS\\DOT_NET\\",
   "Documents": [
     {
@@ -19,7 +15,6 @@
       "RelativeMoniker": "D:0:0:{B8561A17-E633-4D6B-BE3B-BFFC9B9CF6DC}|rise_gs\\rise_gs.csproj|solutionrelative:rise_gs\\dtos\\loginrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
->>>>>>> bd27691 (adicionando IA)
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -27,13 +22,6 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-<<<<<<< HEAD
-          "SelectedChildIndex": -1,
-          "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
-=======
           "SelectedChildIndex": 0,
           "Children": [
             {
@@ -59,7 +47,8 @@
               "RelativeToolTip": "rise_gs\\Controllers\\UsuarioController.cs",
               "ViewState": "AgIAAMIAAAAAAAAAAAAWwNAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-19T01:08:08.426Z"
+              "WhenOpened": "2025-11-19T01:08:08.426Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -71,8 +60,8 @@
               "RelativeToolTip": "rise_gs\\DTOs\\LoginRequestDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-19T01:15:53.732Z"
->>>>>>> bd27691 (adicionando IA)
+              "WhenOpened": "2025-11-19T01:15:53.732Z",
+              "EditorCaption": ""
             }
           ]
         }

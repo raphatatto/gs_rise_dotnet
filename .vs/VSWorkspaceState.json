@@ -1,7 +1,21 @@
 {
   "ExpandedNodes": [
+<<<<<<< HEAD
     ""
   ],
   "SelectedNode": "\\C:\\Users\\RaphaelaOliveiraTatt\\source\\repos\\raphatatto\\gs_rise_dotnet",
+=======
+    "",
+    "\\RiseTest",
+    "\\RiseTest\\bin",
+    "\\RiseTest\\bin\\Release",
+    "\\rise_gs",
+    "\\rise_gs\\Controllers",
+    "\\rise_gs\\DTOs",
+    "\\rise_gs\\Models",
+    "\\rise_gs\\Properties",
+    "\\rise_gs\\Services"
+  ],
+>>>>>>> bd27691 (adicionando IA)
   "PreviewInSolutionExplorer": false
 }

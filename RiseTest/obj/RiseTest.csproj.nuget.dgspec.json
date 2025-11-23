@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\RaphaelaOliveiraTatt\\source\\repos\\raphatatto\\gs_rise_dotnet\\RiseTest\\RiseTest.csproj": {}
   },
   "projects": {
@@ -12,12 +13,25 @@
         "projectPath": "C:\\Users\\RaphaelaOliveiraTatt\\source\\repos\\raphatatto\\gs_rise_dotnet\\RiseTest\\RiseTest.csproj",
         "packagesPath": "C:\\Users\\RaphaelaOliveiraTatt\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\RaphaelaOliveiraTatt\\source\\repos\\raphatatto\\gs_rise_dotnet\\RiseTest\\obj\\",
+=======
+    "C:\\Users\\trc24\\Área de Trabalho\\FIAP\\GS\\DOT_NET\\RiseTest\\RiseTest.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\trc24\\Área de Trabalho\\FIAP\\GS\\DOT_NET\\RiseTest\\RiseTest.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\trc24\\Área de Trabalho\\FIAP\\GS\\DOT_NET\\RiseTest\\RiseTest.csproj",
+        "projectName": "RiseTest",
+        "projectPath": "C:\\Users\\trc24\\Área de Trabalho\\FIAP\\GS\\DOT_NET\\RiseTest\\RiseTest.csproj",
+        "packagesPath": "C:\\Users\\trc24\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\trc24\\Área de Trabalho\\FIAP\\GS\\DOT_NET\\RiseTest\\obj\\",
+>>>>>>> bd27691 (adicionando IA)
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\RaphaelaOliveiraTatt\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\trc24\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -32,8 +46,13 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
+<<<<<<< HEAD
               "C:\\Users\\RaphaelaOliveiraTatt\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\rise_gs.csproj": {
                 "projectPath": "C:\\Users\\RaphaelaOliveiraTatt\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\rise_gs.csproj"
+=======
+              "C:\\Users\\trc24\\Área de Trabalho\\FIAP\\GS\\DOT_NET\\rise_gs\\rise_gs.csproj": {
+                "projectPath": "C:\\Users\\trc24\\Área de Trabalho\\FIAP\\GS\\DOT_NET\\rise_gs\\rise_gs.csproj"
+>>>>>>> bd27691 (adicionando IA)
               }
             }
           }
@@ -48,7 +67,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "10.0.100"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
@@ -88,29 +107,16 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.21, 8.0.21]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[8.0.21, 8.0.21]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[8.0.21, 8.0.21]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.100-rc.2.25502.107/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
+<<<<<<< HEAD
     "C:\\Users\\RaphaelaOliveiraTatt\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\rise_gs.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -119,12 +125,22 @@
         "projectPath": "C:\\Users\\RaphaelaOliveiraTatt\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\rise_gs.csproj",
         "packagesPath": "C:\\Users\\RaphaelaOliveiraTatt\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\RaphaelaOliveiraTatt\\source\\repos\\raphatatto\\gs_rise_dotnet\\rise_gs\\obj\\",
+=======
+    "C:\\Users\\trc24\\Área de Trabalho\\FIAP\\GS\\DOT_NET\\rise_gs\\rise_gs.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\trc24\\Área de Trabalho\\FIAP\\GS\\DOT_NET\\rise_gs\\rise_gs.csproj",
+        "projectName": "rise_gs",
+        "projectPath": "C:\\Users\\trc24\\Área de Trabalho\\FIAP\\GS\\DOT_NET\\rise_gs\\rise_gs.csproj",
+        "packagesPath": "C:\\Users\\trc24\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\trc24\\Área de Trabalho\\FIAP\\GS\\DOT_NET\\rise_gs\\obj\\",
+>>>>>>> bd27691 (adicionando IA)
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\RaphaelaOliveiraTatt\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\trc24\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -151,7 +167,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "10.0.100"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
@@ -205,24 +221,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.21, 8.0.21]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[8.0.21, 8.0.21]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[8.0.21, 8.0.21]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[8.0.21, 8.0.21]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -231,7 +229,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.100-rc.2.25502.107/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
